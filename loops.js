@@ -17,17 +17,14 @@ function whileLoop(n) {
  return "done";
 }
 
-var i = 0;
 
-function incrementVariable() {
-i = i + 1;
+function maybeTrue() {
+  return Math.random() >= 0.5;
 }
 
-function doWhileLoop(array) {
-  let x = 0;
-   do {
-     console.log(x);  
-     x++;
-  } while (array.length > 0);
-  return array;
+function doWhileLoop(array){
+do {
+  array.pop();
+} while (array.length>0 && maybeTrue());
+return array;
 }
